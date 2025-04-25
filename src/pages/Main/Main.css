@@ -1,0 +1,21 @@
+.main-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.center-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+button {
+    width: 200px;
+    height: 50px;
+    font-size: 18px;
+    cursor: pointer;
+}

@@ -1,0 +1,64 @@
+.alert-form-container {
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+.alert-form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+}
+
+.alert-label {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.alert-input {
+    padding: 0.6rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.alert-input-content {
+    padding: 0.6rem 1rem;
+    border: 1px solid #ccc;
+    min-height: 100px;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.alert-input:focus {
+    border-color: #f4ae7e;
+    box-shadow: 0 0 0 2px rgba(244, 174, 126, 0.2);
+}
+.alert-button-wrapper {
+    text-align: center;
+}
+
+button {
+    margin-top: 1rem;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    background-color: #f4ae7e;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e69c62;
+}
