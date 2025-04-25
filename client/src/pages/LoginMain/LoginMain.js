@@ -75,11 +75,6 @@ function LoginMain() {
                             key={product.productId}
                             onClick={() => moveProductDetail(product.productId)}
                         >
-                            <img
-                                src='https://via.placeholder.com/240x160'
-                                alt='상품 이미지'
-                                className='product-image'
-                            />
                             <p className='product-description'>
                                 <strong>{product.productname}</strong>
                                 <br />
