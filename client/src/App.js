@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
+import RedirectBasedOnLogin from './components/header/Header/RedirectBasedOnLogin/RedirectBasedOnLogin';
 import Main from './pages/Main/Main';
 import LoginMain from './pages/LoginMain/LoginMain';
 import SignUp from './pages/SignUp/SignUp';
@@ -16,6 +16,8 @@ function App() {
     return (
         <Router>
             <Routes>
+                {/* 기본 경로는 Redirect 컴포넌트를 통해 리디렉션 */}
+                <Route path='/' element={<RedirectBasedOnLogin />} />
                 <Route path='/main' element={<Main />} />
                 <Route path='/loginmain' element={<LoginMain />} />
                 <Route path='/signup' element={<SignUp />} />

@@ -22,6 +22,7 @@ function MyPage() {
                     headers: { Authorization: token },
                 });
                 setUserData(response.data);
+                console.log(response.data);
             } catch (error) {
                 console.error('유저 정보 불러오기 실패:', error);
             }
