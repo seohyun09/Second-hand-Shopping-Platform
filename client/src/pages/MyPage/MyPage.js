@@ -17,6 +17,10 @@ function MyPage() {
     useEffect(() => {
         const fetchUserData = async () => {
             try {
+                if (!newIntro) {
+                    console.log('널값이에용');
+                }
+                console.log(userData);
                 const token = localStorage.getItem('token');
                 const response = await axios.get('http://localhost:8080/users', {
                     headers: { Authorization: token },
@@ -51,10 +55,19 @@ function MyPage() {
 
     const handleIntroSubmit = async () => {
         try {
+            if (!newIntro) {
+                console.log('널값이에용');
+            }
+            console.log(newIntro);
             const token = localStorage.getItem('token');
-            await axios.patch('http://localhost:8080/users/intro', { newIntro }, { headers: { Authorization: token } });
+            const response = await axios.patch(
+                'http://localhost:8080/users/intro',
+                { newIntro },
+                { headers: { Authorization: token } }
+            );
 
-            setUserData((prev) => ({ ...prev, intro: newIntro }));
+            console.log(userData.intro);
+            console.log(userData);
             setIsIntroModalOpen(false);
         } catch (error) {
             console.error('소개글 수정 실패:', error);
@@ -121,7 +134,7 @@ function MyPage() {
                 <div className='modal'>
                     <div className='modal-content'>
                         <h2>소개글 수정</h2>
-                        <textarea
+                        <input
                             value={newIntro}
                             onChange={(e) => setNewIntro(e.target.value)}
                             placeholder='새로운 소개글을 입력하세요'
